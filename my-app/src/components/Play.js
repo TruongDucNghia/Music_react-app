@@ -1,0 +1,111 @@
+import React from 'react'
+
+const Play = () => {
+    return (
+        <div className="app_play">
+            <div className="app_play-fixed" data-cl="duma">
+                <div className="play_fixed-item1">
+                    <div className="player_boxImg">
+                        <img id="imgSong" src="./public/img/logo.jpg" alt />
+                    </div>
+                    <div className="player_boxName">
+                        <div className="player_boxName-content">
+                            <div className="player_boxName-animate">
+                                <span id="nameSong">Phố đã lên đèn</span>
+                            </div>
+                        </div>
+                        <p id="nameSinger">Trương Nghĩa</p>
+                    </div>
+                    <div className="player_boxIcon">
+                        <button className="btn_love">
+                            <i className="bi bi-heart" />
+                        </button>
+                        <button className="player_more">
+                            <i className="bi bi-three-dots" />
+                        </button>
+                    </div>
+                </div>
+                <div className="play_fixed-item2">
+                    <div className="player_control-icon">
+                        <div className="player_item2-icons random">
+                            <i className="bi bi-shuffle" />
+                        </div>
+                        <div className="player_item2-icons prev">
+                            <i className="bi bi-skip-start-fill" />
+                        </div>
+                        <div className="player_item2-icons plays">
+                            <i className="bi bi-play-fill" />
+                            <i className="bi bi-pause" />
+                        </div>
+                        <div className="player_item2-icons next">
+                            <i className="bi bi-skip-end-fill" />
+                        </div>
+                        <div className="player_item2-icons repeat">
+                            <i className="bi bi-arrow-repeat" />
+                        </div>
+                    </div>
+                    <div className="player_control-progres">
+                        <div className="player_time-start">
+                            <span>00:00</span>
+                        </div>
+                        <input type="range" className="input_range-time" defaultValue={0} min={0} step={1} max={100} />
+                        <div className="player_time-end">
+                            <span>05:30</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="play_fixed-item3">
+                    <div className="player_item3-content">
+                        <div className="player_item3-icon">
+                            <i className="bi bi-camera-video" />
+                        </div>
+                        <div className="player_item3-icon">
+                            <i className="bi bi-mic" />
+                        </div>
+                        <div className="player_item3-icon">
+                            <i className="bi bi-volume-up" />
+                        </div>
+                        <div className="play_item3-volume">
+                            <input type="range" className="volume__range" defaultValue={100} step={1} min={0} max={100} />
+                            <div className="progress__track volume--track">
+                                <div className="progress__track-update" style={{ width: '40%' }} />
+                            </div>
+                        </div>
+                        <div className="player_item3-iconList">
+                            <i className="bi bi-music-note-list" />
+                        </div>
+                    </div>
+                </div>
+                <audio src id="audio" />
+            </div>
+            <div className="app_play-full">
+                <div className="app_play-header">
+                    <div className="app_play-logo">
+                        <img src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.5.4/static/media/icon_zing_mp3_60.f6b51045.svg" alt />
+                    </div>
+                    <div className="app_play-pop">
+                        <button className="active">DANH SÁCH PHÁT</button>
+                        <button>KARAOKE</button>
+                        <button>LỜI BÀI HÁT</button>
+                    </div>
+                    <div className="app_play-setting">
+                        <button><i className="bi bi-arrows-angle-expand" /></button>
+                        <button><i className="bi bi-gear" /></button>
+                        <button id="bi-down"><i className="bi bi-chevron-down" /></button>
+                    </div>
+                </div>
+                <div className="app_play-boxImg">
+                    <img src="./public/img/logo.jpg" alt />
+                </div>
+                <div className="app_play-boxText">
+                    <span>Now playing</span>
+                    <span id="name1">Cửu vỹ hồ</span>
+                    <span id="singer2">Sơn Tùng</span>
+                </div>
+            </div>
+        </div>
+
+    )
+}
+
+export default Play
