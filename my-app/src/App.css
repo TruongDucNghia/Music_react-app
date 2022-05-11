@@ -952,7 +952,7 @@
   background-size: 1920px auto;
   background-color: #37075d;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background-image: url(./img/themeBgs/listTheme1/playerThemes/theme1.png);
+  background-image: url(../public/img/themeBgs/listTheme1/playerThemes/theme1.png);
 }
 .app_play-fixed{
   cursor: pointer;
@@ -1148,7 +1148,7 @@
   justify-content: flex-start;
   background-size: 1920px auto;
   background-color: #6a39af;
-  background:url(./img/themeBgs/listTheme1/theme1.svg);
+  background:url(../public/img/themeBgs/listTheme1/theme1.svg);
   /* transition: all 0.3s ease; */
 }
 .app_play.active .app_play-full{
@@ -1428,7 +1428,7 @@
   background-color: #37075d;
   -webkit-tap-highlight-color: transparent;
   /* height: calc(100vh - 90px); */
-  background:url(./img/themeBgs/listTheme1/theme1.svg);
+  background:url(../public/img/themeBgs/listTheme1/theme1.svg);
   height: 100vh;
 }
 .body_header{

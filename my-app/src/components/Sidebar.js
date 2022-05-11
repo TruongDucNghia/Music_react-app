@@ -1,36 +1,37 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 
 const Sidebar = () => {
     return (
         <div className="app_sidebar">
             <div className="app_sidebar-logo">
-                <img src="./public/img/logos/main-logo.svg" alt />
+                <img src="img/logos/main-logo.svg" />
             </div>
             <div className="app_sidebar-menu">
                 <ul className="ul-menu1">
-                    <li className="menu_item active"><a href>
+                    <li className="menu_item active"><NavLink to={`/`}>
                         <i className="bi bi-music-player" />
                         <span>Cá Nhân</span>
-                    </a></li>
-                    <li className="menu_item"><a href>
+                    </NavLink></li>
+                    <li className="menu_item"><NavLink to={`explore`}>
                         <i className="bi bi-vinyl" />
                         <span>Khám Phá</span>
-                    </a></li>
-                    <li className="menu_item"><a href>
+                    </NavLink></li>
+                    <li className="menu_item"><NavLink to={`charts`}>
                         <i className="bi bi-music-note-list" />
                         <span>#ZingChart</span>
-                    </a></li>
-                    <li className="menu_item activeLive"><a href>
+                    </NavLink></li>
+                    <li className="menu_item activeLive"><NavLink to={`radio`}>
                         <i className="bi bi-soundwave" />
                         <span>Radio</span>
                         <div className="live">
                             <span>live</span>
                         </div>
-                    </a></li>
-                    <li className="menu_item"><a href>
+                    </NavLink></li>
+                    <li className="menu_item"><NavLink to={`following`}>
                         <i className="bi bi-file-earmark-slides" />
                         <span>Theo Dõi</span>
-                    </a></li>
+                    </NavLink></li>
                 </ul>
             </div>
             <div className="ul-menu2">
