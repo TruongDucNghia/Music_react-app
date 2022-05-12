@@ -1,6 +1,88 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Presonal = () => {
+    useEffect(() => {
+        function handlerHeader() {
+            const scroll = document.querySelectorAll('.app_container')
+            const header = document.querySelector('.body_header')
+
+            scroll.forEach(item => {
+                item.addEventListener('scroll', () => {
+                    const scrollHeight = item.scrollTop;
+                    if (scrollHeight > 10) {
+                        header.classList.add('active')
+                    }
+                    if (scrollHeight == 0) {
+                        header.classList.remove('active')
+                    }
+                })
+            })
+        }
+        handlerHeader()
+        // handler active tab presonal
+        function handlerTabPresonal() {
+            const tabPresonal = document.querySelectorAll('.presonal_tab-content')
+            const tabMenu = document.querySelectorAll('.presonal_menu-btnItem')
+            tabMenu.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    document.querySelector('.presonal_tab-content.active').classList.remove('active')
+                    document.querySelector('.presonal_menu-btnItem.active').classList.remove('active')
+
+                    item.classList.add('active')
+                    tabPresonal[index].classList.add('active')
+                })
+            })
+        }
+        handlerTabPresonal()
+        let imgsIndex = 2
+        // handler slider tab1
+        function handerSliderTab1() {
+            const sliderImg = document.querySelectorAll('.presonal_item1-slider--boxImg')
+            const slideImgFirst = document.querySelector('.presonal_item1-slider--boxImg.first')
+            const slideImgSecond = document.querySelector('.presonal_item1-slider--boxImg.second')
+            const slideImgThird = sliderImg[imgsIndex]
+            const slideImgFourth = sliderImg[imgsIndex === sliderImg.length - 1 ? 0 : imgsIndex + 1]
+
+            imgsIndex++;
+            if (imgsIndex >= sliderImg.length) {
+                imgsIndex = 0
+            }
+            slideImgFourth.classList.replace('fourth', 'third')
+            slideImgThird.classList.replace('third', 'second')
+            slideImgSecond.classList.replace('second', 'first')
+            slideImgFirst.classList.replace('first', 'fourth')
+            setTimeout(handerSliderTab1, 2000)
+
+        }
+        handerSliderTab1()
+        // handler slider album
+        function handlerSlideAlbum() {
+            const AlbumContainer = document.querySelectorAll('.slider_album')
+            const nxtBtn = document.querySelectorAll('.slider_right')
+            const preBtn = document.querySelectorAll('.slider_left')
+            AlbumContainer.forEach((item, i) => {
+                nxtBtn[i].addEventListener('click', () => {
+                    item.scrollLeft += item.clientWidth
+                })
+                preBtn[i].addEventListener('click', () => {
+                    item.scrollLeft -= item.clientWidth
+                })
+                item.addEventListener('scroll', () => {
+                    const scrollLeft = Math.ceil(item.scrollLeft)
+                    const maxScrollLeft = Math.ceil(item.scrollWidth - item.clientWidth)
+                    if (scrollLeft === 0) {
+                        preBtn[i].classList.add('active')
+                    } else if (scrollLeft >= maxScrollLeft) {
+                        nxtBtn[i].classList.add('active')
+                    } else {
+                        preBtn[i].classList.remove('active')
+                        nxtBtn[i].classList.remove('active')
+                    }
+                })
+            })
+        }
+        handlerSlideAlbum()
+    }, [])
     return (
         <div className="app_container active">
             <div className="app_container-content">

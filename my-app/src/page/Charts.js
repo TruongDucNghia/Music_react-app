@@ -1,6 +1,55 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Charts = () => {
+    useEffect(() =>{
+        function handlerHeader(){
+            const scroll = document.querySelectorAll('.app_container')
+            const header = document.querySelector('.body_header')
+        
+            scroll.forEach(item =>{
+                item.addEventListener('scroll', ()=>{
+                    const scrollHeight = item.scrollTop;
+                        if(scrollHeight > 10){
+                            header.classList.add('active')
+                        }
+                        if(scrollHeight == 0){
+                            header.classList.remove('active')
+                        }
+                })
+            })
+        }
+        handlerHeader()
+        function handlerExpand(){
+            const btnExpand = document.querySelector('.charts_more-top button:first-child')
+            const btnCollapse = document.querySelector('.charts_more-top button:last-child')
+            const items = document.querySelectorAll('.charts_content-item')
+            items.forEach((item, index) =>{
+                if(index >= 10){
+                    item.classList.add('active')
+                }
+            })
+            btnExpand.addEventListener('click', () =>{
+                items.forEach((item, index) =>{
+                    if(index >= 10){
+                        item.classList.remove('active')
+                    }
+                })
+                btnCollapse.style.display = 'block'
+                btnExpand.style.display = 'none'
+            })
+            btnCollapse.addEventListener('click', () =>{
+                items.forEach((item, index) =>{
+                    if(index >= 10){
+                        item.classList.add('active')
+                    }
+                })
+                btnCollapse.style.display = 'none'
+                btnExpand.style.display = 'block'
+            })
+        }
+        // -----------Call function-----------
+        handlerExpand()
+      }, [])
     return (
         <div className="app_container active">
             <div className="app_container-content">

@@ -1,6 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Play = () => {
+    useEffect(() =>{
+        function handlerDisplay(){
+            const btn = document.querySelector('#bi-down')
+            const fixed = document.querySelector('.app_play')
+            const headerNone = document.querySelector('.body_header')
+            fixed.addEventListener('click', (e) =>{
+                const cl =  e.target.dataset.cl
+                if(cl){
+                    fixed.classList.add('active')
+                    headerNone.style.visibility = 'hidden'
+                    btn.addEventListener('click', () =>{
+                        fixed.classList.remove('active')
+                        headerNone.style.visibility = 'visible'
+                    })
+                }
+            })
+            
+        }
+        handlerDisplay()
+    }, [])
     return (
         <div className="app_play">
             <div className="app_play-fixed" data-cl="duma">

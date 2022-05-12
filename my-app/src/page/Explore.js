@@ -1,6 +1,52 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Explore = () => {
+    useEffect(() => {
+        function handlerHeader() {
+            const scroll = document.querySelectorAll('.app_container')
+            const header = document.querySelector('.body_header')
+
+            scroll.forEach(item => {
+                item.addEventListener('scroll', () => {
+                    const scrollHeight = item.scrollTop;
+                    if (scrollHeight > 10) {
+                        header.classList.add('active')
+                    }
+                    if (scrollHeight == 0) {
+                        header.classList.remove('active')
+                    }
+                })
+            })
+        }
+        handlerHeader()
+        // handler slider album
+        function handlerSlideAlbum() {
+            const AlbumContainer = document.querySelectorAll('.slider_album')
+            const nxtBtn = document.querySelectorAll('.slider_right')
+            const preBtn = document.querySelectorAll('.slider_left')
+            AlbumContainer.forEach((item, i) => {
+                nxtBtn[i].addEventListener('click', () => {
+                    item.scrollLeft += item.clientWidth
+                })
+                preBtn[i].addEventListener('click', () => {
+                    item.scrollLeft -= item.clientWidth
+                })
+                item.addEventListener('scroll', () => {
+                    const scrollLeft = Math.ceil(item.scrollLeft)
+                    const maxScrollLeft = Math.ceil(item.scrollWidth - item.clientWidth)
+                    if (scrollLeft === 0) {
+                        preBtn[i].classList.add('active')
+                    } else if (scrollLeft >= maxScrollLeft) {
+                        nxtBtn[i].classList.add('active')
+                    } else {
+                        preBtn[i].classList.remove('active')
+                        nxtBtn[i].classList.remove('active')
+                    }
+                })
+            })
+        }
+        handlerSlideAlbum()
+    }, [])
     return (
         <div className="app_container active">
             <div className="app_container-content">

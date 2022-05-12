@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {NavLink} from 'react-router-dom'
 
 const Sidebar = () => {
+    useEffect(() =>{
+        function handlerTabMenu(){
+            const tab = document.querySelectorAll('.app_container')
+            const menu = document.querySelectorAll('.app_sidebar-menu .menu_item')
+            menu.forEach((btn, index) =>{
+                btn.addEventListener('click', (e)=>{           
+                    // e.preventDefault()
+                    document.querySelector('.menu_item.active').classList.remove('active')
+                    btn.classList.add('active')
+                    tab[index].classList.add('active')
+                    tab[index].scrollTop = 0
+                })
+            })
+        }
+        handlerTabMenu()
+    }, [])
     return (
         <div className="app_sidebar">
             <div className="app_sidebar-logo">

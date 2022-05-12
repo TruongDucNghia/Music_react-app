@@ -1,6 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Radio = () => {
+    useEffect(() => {
+        function handlerHeader() {
+            const scroll = document.querySelectorAll('.app_container')
+            const header = document.querySelector('.body_header')
+
+            scroll.forEach(item => {
+                item.addEventListener('scroll', () => {
+                    const scrollHeight = item.scrollTop;
+                    if (scrollHeight > 10) {
+                        header.classList.add('active')
+                    }
+                    if (scrollHeight == 0) {
+                        header.classList.remove('active')
+                    }
+                })
+            })
+        }
+        handlerHeader()
+    }, [])
     return (
         <div className="app_container active">
             <div className="app_container-content">
