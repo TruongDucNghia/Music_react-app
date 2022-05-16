@@ -3,12 +3,12 @@ import { Outlet } from 'react-router-dom'
 import Header from './Header'
 import Play from './Play'
 import Sidebar from './Sidebar'
-const Layout = () => {
+const Layout = ({songsIndex, onHandleClickPlay, onHandleSeekSong}) => {
   return (
     <>
       <Header />
       <Sidebar />
-      <Play />
+      <Play songsIndex={songsIndex} onHandleClickPlay={onHandleClickPlay} onHandleSeekSong={onHandleSeekSong}/>
       <Outlet />
     </>
   )

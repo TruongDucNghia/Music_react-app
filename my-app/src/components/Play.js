@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-const Play = () => {
+const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong}) => {
     useEffect(() =>{
         function handlerDisplay(){
             const btn = document.querySelector('#bi-down')
@@ -26,15 +26,15 @@ const Play = () => {
             <div className="app_play-fixed" data-cl="duma">
                 <div className="play_fixed-item1">
                     <div className="player_boxImg">
-                        <img id="imgSong" src="./public/img/logo.jpg" alt />
+                        <img id="imgSong" src={songsIndex.image} alt />
                     </div>
                     <div className="player_boxName">
                         <div className="player_boxName-content">
                             <div className="player_boxName-animate">
-                                <span id="nameSong">Phố đã lên đèn</span>
+                                <span id="nameSong">{songsIndex.name}</span>
                             </div>
                         </div>
-                        <p id="nameSinger">Trương Nghĩa</p>
+                        <p id="nameSinger">{songsIndex.singer}</p>
                     </div>
                     <div className="player_boxIcon">
                         <button className="btn_love">
@@ -53,7 +53,7 @@ const Play = () => {
                         <div className="player_item2-icons prev">
                             <i className="bi bi-skip-start-fill" />
                         </div>
-                        <div className="player_item2-icons plays">
+                        <div onClick={(e) => onHandleClickPlay(e)} className="player_item2-icons plays">
                             <i className="bi bi-play-fill" />
                             <i className="bi bi-pause" />
                         </div>
@@ -68,7 +68,7 @@ const Play = () => {
                         <div className="player_time-start">
                             <span>00:00</span>
                         </div>
-                        <input type="range" className="input_range-time" defaultValue={0} min={0} step={1} max={100} />
+                        <input type="range" onChange={(e) => onHandleSeekSong(e)} className="input_range-time" defaultValue={0} min={0} step={1} max={100} />
                         <div className="player_time-end">
                             <span>05:30</span>
                         </div>
@@ -96,7 +96,7 @@ const Play = () => {
                         </div>
                     </div>
                 </div>
-                <audio src id="audio" />
+                <audio src={songsIndex.path} id="audio" />
             </div>
             <div className="app_play-full">
                 <div className="app_play-header">
@@ -115,12 +115,12 @@ const Play = () => {
                     </div>
                 </div>
                 <div className="app_play-boxImg">
-                    <img src="./public/img/logo.jpg" alt />
+                    <img src={songsIndex.image} alt />
                 </div>
                 <div className="app_play-boxText">
                     <span>Now playing</span>
-                    <span id="name1">Cửu vỹ hồ</span>
-                    <span id="singer2">Sơn Tùng</span>
+                    <span id="name1">{songsIndex.name}</span>
+                    <span id="singer2">{songsIndex.singer}</span>
                 </div>
             </div>
         </div>
