@@ -6,7 +6,6 @@ import Explore from "./page/Explore";
 import Following from "./page/Following";
 import Presonal from "./page/Presonal";
 import Radio from "./page/Radio";
-
 function App() {
   return (
     <Routes>
