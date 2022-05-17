@@ -45,7 +45,9 @@ function App() {
     audio.ontimeupdate = () => {
       progress.value = Math.floor(audio.currentTime / audio.duration * 100)
     }
-
+    audio.onended = () =>{
+      handleNextSong()
+    }
   }
   const handleSeekSong = (e) => {
     const seekCurrent = audio.duration / 100 * e.target.value
