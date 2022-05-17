@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPrevSong}) => {
+const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPrevSong, onRandomSong}) => {
     useEffect(() =>{
         function handlerDisplay(){
             const btn = document.querySelector('#bi-down')
@@ -47,7 +47,7 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPr
                 </div>
                 <div className="play_fixed-item2">
                     <div className="player_control-icon">
-                        <div className="player_item2-icons random">
+                        <div onClick={onRandomSong} className="player_item2-icons random">
                             <i className="bi bi-shuffle" />
                         </div>
                         <div onClick={onPrevSong} className="player_item2-icons prev">

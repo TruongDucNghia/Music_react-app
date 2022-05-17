@@ -14,6 +14,7 @@ function App() {
   const [progress, setProgress] = useState()
   const [playcd, setPlaycd] = useState()
   const [isPlaying, setIsPlaying] = useState(true)
+  const [isRandom, setIsRandom] = useState(false)
   useEffect(() => {
     const audios = document.querySelector('#audio')
     const progress = document.querySelector('.input_range-time')
@@ -37,7 +38,6 @@ function App() {
       playcd.play()
     } else {
       playcd.pause()
-      // console.log(cdThumbAnimate);
       audio.pause()
       e.target.parentElement.classList.remove('pause')
       setIsPlaying(!isPlaying)
@@ -49,23 +49,40 @@ function App() {
   }
   const handleSeekSong = (e) => {
     const seekCurrent = audio.duration / 100 * e.target.value
-    console.log(seekCurrent);
     audio.currentTime = seekCurrent
   }
   const handleNextSong = () =>{
-    setIndex(index + 1)
-    console.log(audio);
-    if(index + 1 >= songs[0].length){
-      setIndex(0)
+    if(isRandom){
+      randomSong()
+    }else{
+      setIndex(index + 1)
+      if(index + 1 >= songs[0].length){
+        setIndex(0)
+      }
     }
     audio.autoplay = true
   }
   const handlePrevSong = () =>{
-    setIndex(index - 1)
-    audio.autoplay = true
-    if(index - 1 < 0){
-      setIndex(songs[0].length - 1)
+    if(isRandom){
+      randomSong()
+    }else{
+      setIndex(index - 1)
+      if(index - 1 < 0){
+        setIndex(songs[0].length - 1)
+      }
     }
+    audio.autoplay = true
+  }
+  const handleRandomSong = (e) =>{
+    e.target.parentElement.classList.toggle('activeColor')
+    setIsRandom(!isRandom)
+  }
+  const randomSong = () =>{
+    let newIndex
+    do{
+      newIndex = Math.floor(Math.random() * songs[0].length)
+    }while(index === newIndex)
+    setIndex(newIndex)
   }
   return (
     <Routes>
@@ -75,6 +92,7 @@ function App() {
             songsIndex={songsIndex} 
             onNextSong={handleNextSong}
             onPrevSong={handlePrevSong}
+            onRandomSong={handleRandomSong}
           />}>
         <Route index element={<Presonal />} />
         <Route path="explore" element={<Explore />} />
