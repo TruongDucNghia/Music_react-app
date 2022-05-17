@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong}) => {
+const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPrevSong}) => {
     useEffect(() =>{
         function handlerDisplay(){
             const btn = document.querySelector('#bi-down')
@@ -25,7 +25,7 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong}) => {
         <div className="app_play">
             <div className="app_play-fixed" data-cl="duma">
                 <div className="play_fixed-item1">
-                    <div className="player_boxImg">
+                    <div className="player_boxImg cdThumb">
                         <img id="imgSong" src={songsIndex.image} alt />
                     </div>
                     <div className="player_boxName">
@@ -50,14 +50,14 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong}) => {
                         <div className="player_item2-icons random">
                             <i className="bi bi-shuffle" />
                         </div>
-                        <div className="player_item2-icons prev">
+                        <div onClick={onPrevSong} className="player_item2-icons prev">
                             <i className="bi bi-skip-start-fill" />
                         </div>
                         <div onClick={(e) => onHandleClickPlay(e)} className="player_item2-icons plays">
                             <i className="bi bi-play-fill" />
                             <i className="bi bi-pause" />
                         </div>
-                        <div className="player_item2-icons next">
+                        <div onClick={onNextSong} className="player_item2-icons next">
                             <i className="bi bi-skip-end-fill" />
                         </div>
                         <div className="player_item2-icons repeat">
@@ -115,7 +115,7 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong}) => {
                     </div>
                 </div>
                 <div className="app_play-boxImg">
-                    <img src={songsIndex.image} alt />
+                    <img className='cdThumb' src={songsIndex.image} alt />
                 </div>
                 <div className="app_play-boxText">
                     <span>Now playing</span>
