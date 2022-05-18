@@ -15,6 +15,7 @@ function App() {
   const [playcd, setPlaycd] = useState()
   const [isPlaying, setIsPlaying] = useState(true)
   const [isRandom, setIsRandom] = useState(false)
+  const [isRepeat, setIsRepeat] = useState(false)
   useEffect(() => {
     const audios = document.querySelector('#audio')
     const progress = document.querySelector('.input_range-time')
@@ -30,6 +31,24 @@ function App() {
     setAudio(audios)
     setProgress(progress)
   }, [])
+  useEffect(() =>{
+    const songPlaying = document.querySelectorAll('.presonal_item1-playList--item')
+    songPlaying.forEach(item =>{
+      item.classList.remove('active')
+      if(item.dataset.index == index){
+        item.classList.add('active')
+        item.scrollIntoView({behavior: "smooth", block: "center"}, 500)
+      }
+      item.addEventListener('click', (e) =>{
+        const songNode = e.target.closest('.presonal_item1-playList--item:not(.active')
+        if(songNode || e.target.closest('.presonal_item1-playList--itemRight')){
+          if(songNode){
+            setIndex(item.dataset.index)
+          }
+        }
+      })
+    })
+  }, [index])
   const handleClickPlay = (e) => {
     if (isPlaying) {
       setIsPlaying(!isPlaying)
@@ -46,7 +65,11 @@ function App() {
       progress.value = Math.floor(audio.currentTime / audio.duration * 100)
     }
     audio.onended = () =>{
-      handleNextSong()
+      if(isRepeat){
+        audio.play()
+      }else{
+        handleNextSong()
+      }
     }
   }
   const handleSeekSong = (e) => {
@@ -79,6 +102,10 @@ function App() {
     e.target.parentElement.classList.toggle('activeColor')
     setIsRandom(!isRandom)
   }
+  const handleRepeatSong = (e) =>{
+    e.target.parentElement.classList.toggle('activeColor')
+    setIsRepeat(!isRepeat)
+  }
   const randomSong = () =>{
     let newIndex
     do{
@@ -95,6 +122,7 @@ function App() {
             onNextSong={handleNextSong}
             onPrevSong={handlePrevSong}
             onRandomSong={handleRandomSong}
+            onRepeatSong={handleRepeatSong}
           />}>
         <Route index element={<Presonal />} />
         <Route path="explore" element={<Explore />} />

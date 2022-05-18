@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPrevSong, onRandomSong}) => {
+const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPrevSong, onRandomSong, onRepeatSong}) => {
     useEffect(() =>{
         function handlerDisplay(){
             const btn = document.querySelector('#bi-down')
@@ -60,7 +60,7 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPr
                         <div onClick={onNextSong} className="player_item2-icons next">
                             <i className="bi bi-skip-end-fill" />
                         </div>
-                        <div className="player_item2-icons repeat">
+                        <div onClick={(e) => onRepeatSong(e)} className="player_item2-icons repeat">
                             <i className="bi bi-arrow-repeat" />
                         </div>
                     </div>

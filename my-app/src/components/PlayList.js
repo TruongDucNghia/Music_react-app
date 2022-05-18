@@ -3,7 +3,7 @@ import songs from '../data'
 const PlayList = () => {
   return (
     songs[0].map((song, index) =>
-      <div key={index} className="presonal_item1-playList--item">
+      <div key={index} data-index={index} className="presonal_item1-playList--item">
         <div className="presonal_item1-playList--itemLeft">
           <div className="presonal_item1-playList--boxImg">
             <img src={song.image} alt />

@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 import Header from './Header'
 import Play from './Play'
 import Sidebar from './Sidebar'
-const Layout = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPrevSong, onRandomSong}) => {
+const Layout = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPrevSong, onRandomSong, onRepeatSong}) => {
   return (
     <>
       <Header />
@@ -14,6 +14,7 @@ const Layout = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, on
             onNextSong={onNextSong}
             onPrevSong={onPrevSong}
             onRandomSong={onRandomSong}
+            onRepeatSong={onRepeatSong}
             />
       <Outlet />
     </>
