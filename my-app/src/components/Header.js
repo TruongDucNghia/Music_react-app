@@ -116,7 +116,7 @@ const Header = () => {
                     </button>
                 </div>
                 <div className="header_item1 avatar">
-                    <img src="./public/img/logo.jpg" alt />
+                    <img src="./img/avatar/logo.jpg" alt />
                 </div>
             </div>
         </header>
