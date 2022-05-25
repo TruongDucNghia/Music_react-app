@@ -84,7 +84,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>5:30</p>
                                         </div>
@@ -125,7 +125,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>3:30</p>
                                         </div>
@@ -165,7 +165,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>4:10</p>
                                         </div>
@@ -206,7 +206,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -247,7 +247,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>4:40</p>
                                         </div>
@@ -289,7 +289,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>3:40</p>
                                         </div>
@@ -329,7 +329,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>6:40</p>
                                         </div>
@@ -370,7 +370,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>3:40</p>
                                         </div>
@@ -412,7 +412,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -453,7 +453,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>1:40</p>
                                         </div>
@@ -493,7 +493,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -534,7 +534,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>3:20</p>
                                         </div>
@@ -576,7 +576,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:50</p>
                                         </div>
@@ -618,7 +618,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>3:10</p>
                                         </div>
@@ -658,7 +658,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -699,7 +699,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -740,7 +740,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -782,7 +782,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -823,7 +823,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -864,7 +864,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -905,7 +905,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -947,7 +947,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -989,7 +989,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -1031,7 +1031,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -1073,7 +1073,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -1115,7 +1115,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -1157,7 +1157,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -1199,7 +1199,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -1241,7 +1241,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>
@@ -1283,7 +1283,7 @@ const Charts = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="charts_items-center">
+                                    <div className="charts_items-center mobile-none">
                                         <div className="charts_items-timer">
                                             <p>2:40</p>
                                         </div>

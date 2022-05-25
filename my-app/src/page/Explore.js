@@ -1876,46 +1876,53 @@ const Explore = () => {
                                 <p>ĐỐI TÁC ÂM NHẠC</p>
                             </div>
                             <div className="explore_partner-all">
-                                <div className="explore_partner-item">
-                                    <div className="explore_partner-img">
-                                        <img src="./img/tabExplore/brands/brand1.png" alt />
+                                <div className='explore_partner-row'>
+                                    <div className="explore_partner-item">
+                                        <div className="explore_partner-img">
+                                            <img src="./img/tabExplore/brands/brand1.png" alt />
+                                        </div>
+                                    </div>
+                                    <div className="explore_partner-item">
+                                        <div className="explore_partner-img">
+                                            <img src="./img/tabExplore/brands/brand2.png" alt />
+                                        </div>
+                                    </div>
+                                    <div className="explore_partner-item">
+                                        <div className="explore_partner-img">
+                                            <img src="./img/tabExplore/brands/brand3.png" alt />
+                                        </div>
+                                    </div>
+                                    <div className="explore_partner-item">
+                                        <div className="explore_partner-img">
+                                            <img src="./img/tabExplore/brands/brand4.png" alt />
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="explore_partner-item">
-                                    <div className="explore_partner-img">
-                                        <img src="./img/tabExplore/brands/brand2.png" alt />
+
+                                <div className='explore_partner-row'>
+                                    <div className="explore_partner-item">
+                                        <div className="explore_partner-img">
+                                            <img src="./img/tabExplore/brands/brand5.png" alt />
+                                        </div>
+                                    </div>
+                                    <div className="explore_partner-item">
+                                        <div className="explore_partner-img">
+                                            <img src="./img/tabExplore/brands/brand6.png" alt />
+                                        </div>
+                                    </div>
+                                    <div className="explore_partner-item">
+                                        <div className="explore_partner-img">
+                                            <img src="./img/tabExplore/brands/brand7.png" alt />
+                                        </div>
+                                    </div>
+                                    <div className="explore_partner-item">
+                                        <div className="explore_partner-img">
+                                            <img src="./img/tabExplore/brands/brand8.png" alt />
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="explore_partner-item">
-                                    <div className="explore_partner-img">
-                                        <img src="./img/tabExplore/brands/brand3.png" alt />
-                                    </div>
-                                </div>
-                                <div className="explore_partner-item">
-                                    <div className="explore_partner-img">
-                                        <img src="./img/tabExplore/brands/brand4.png" alt />
-                                    </div>
-                                </div>
-                                <div className="explore_partner-item">
-                                    <div className="explore_partner-img">
-                                        <img src="./img/tabExplore/brands/brand5.png" alt />
-                                    </div>
-                                </div>
-                                <div className="explore_partner-item">
-                                    <div className="explore_partner-img">
-                                        <img src="./img/tabExplore/brands/brand6.png" alt />
-                                    </div>
-                                </div>
-                                <div className="explore_partner-item">
-                                    <div className="explore_partner-img">
-                                        <img src="./img/tabExplore/brands/brand7.png" alt />
-                                    </div>
-                                </div>
-                                <div className="explore_partner-item">
-                                    <div className="explore_partner-img">
-                                        <img src="./img/tabExplore/brands/brand8.png" alt />
-                                    </div>
-                                </div>
+
+
                             </div>
                         </div>
                     </section>

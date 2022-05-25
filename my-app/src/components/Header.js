@@ -102,7 +102,7 @@ const Header = () => {
                         </svg>
                     </button>
                 </div>
-                <div className="header_item1">
+                <div className="header_item1 mobile-none">
                     <button>
                         <label htmlFor="inputUpload">
                             <i className="bi bi-upload" />
@@ -110,7 +110,7 @@ const Header = () => {
                         <input type="file" id="inputUpload" />
                     </button>
                 </div>
-                <div className="header_item1">
+                <div className="header_item1 mobile-none">
                     <button>
                         <i className="bi bi-gear" />
                     </button>

@@ -36,7 +36,7 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPr
                         </div>
                         <p id="nameSinger">{songsIndex.singer}</p>
                     </div>
-                    <div className="player_boxIcon">
+                    <div className="player_boxIcon mobile-none">
                         <button className="btn_love">
                             <i className="bi bi-heart" />
                         </button>
@@ -76,10 +76,10 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPr
                 </div>
                 <div className="play_fixed-item3">
                     <div className="player_item3-content">
-                        <div className="player_item3-icon">
+                        <div className="player_item3-icon mobile-none">
                             <i className="bi bi-camera-video" />
                         </div>
-                        <div className="player_item3-icon">
+                        <div className="player_item3-icon mobile-none">
                             <i className="bi bi-mic" />
                         </div>
                         <div className="player_item3-icon">
@@ -91,7 +91,7 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPr
                                 <div className="progress__track-update" style={{ width: '40%' }} />
                             </div>
                         </div>
-                        <div className="player_item3-iconList">
+                        <div className="player_item3-iconList mobile-none">
                             <i className="bi bi-music-note-list" />
                         </div>
                     </div>

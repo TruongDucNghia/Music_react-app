@@ -103,7 +103,7 @@ const Presonal = () => {
                             </div>
                             <div className="presonal_content-vjp">
                                 <button>MUA VIP NGAY</button>
-                                <button>NHẬP CODE VIP</button>
+                                <button className='mobile-none'>NHẬP CODE VIP</button>
                                 <button className="logoutBtn">
                                     <i className="bi bi-three-dots" />
                                     <div className="logout">
@@ -121,7 +121,7 @@ const Presonal = () => {
                                 <button className="presonal_menu-btnItem">ALBUM</button>
                                 <button className="presonal_menu-btnItem">MV</button>
                                 <button className="presonal_menu-btnItem">NGHỆ SĨ</button>
-                                <button className="presonal_menu-btnItem">TẢI LÊN</button>
+                                <button className="presonal_menu-btnItem mobile-none">TẢI LÊN</button>
                             </div>
                         </div>
                         <div className="presonal_tab-container">

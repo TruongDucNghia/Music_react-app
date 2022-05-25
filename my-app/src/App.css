@@ -424,6 +424,7 @@
   width: 100%;
   height: 100%;
   margin-top: 10px;
+  overflow: hidden;
 }
 .explore_boxRadio-item{
   /* width: 100%;
@@ -478,6 +479,7 @@
 }
 .explore_boxRadio-imgs{
   position: relative;
+  margin: 0px 10px;
 }
 .explore_boxRadio-imgs .explore_item-icon.active{
   position: absolute;
@@ -568,7 +570,7 @@
 }
 .explore_boxEvent-items{
   display: flex;
-  justify-content: center;
+  justify-content: start;
   column-gap: 20px;
   margin-top: 20px;
 }
@@ -878,7 +880,6 @@
 .explore_partner-all{
   display: flex;
   justify-content: center;
-  column-gap: 15px;
 }
 .explore_partner-item{
   flex: 0 0 7%;
@@ -964,9 +965,16 @@
 }
 .play_fixed-item1{
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   column-gap: 15px;
+  min-width: 25%;
+}
+.play_fixed-item2{
+  min-width: 50%;
+}
+.play_fixed-item3{
+  min-width: 25%;
 }
 .player_boxImg img{
   width: 100%;
@@ -1093,6 +1101,7 @@
 .player_item3-content{
   display: flex;
   align-items: center;
+  justify-content: end;
 }
 .player_item3-icon{
   color: #fff;
@@ -2376,4 +2385,108 @@
   --offset-x-third: calc(0px - ((230px - (230px * var(--scale-rate-third))) / 2 + 40px));
   --scale-rate-second: calc(196 / 230);
   --scale-rate-third: calc(162 / 230);
+}
+.logo-mobile{
+  display: none;
+}
+.explore_partner-row{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+/* responsive */
+
+/* mobile  width < 740px*/
+@media only screen and (max-width: 46.1875em){
+
+}
+
+/* tablet width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .mobile-none{
+    display: none;
+  }
+  .play_fixed-item3, .play_fixed-item1{
+    width: 30%;
+  }
+  .play_fixed-item2{
+    width: 40%;
+  }
+  .input_range-time {
+    width: 300px;
+  }
+  .explore_boxItems-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .presonal_boxSinger-item{
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .presonal_boxItems-item{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .app_sidebar-menu .ul-menu1 .menu_item a span{
+    display: none;
+  }
+  .ul-menu2 span{
+    display: none;
+  }
+  .app_sidebar{
+    width: 60px;
+  }
+  .logo-mobile{
+    display: block;
+  }
+  .app_sidebar-logo img {
+    width: 40px;
+}
+  .app_sidebar-logo {
+    margin: 20px 0px 0px 10px;
+  }
+  .body_header {
+    width: calc(100% - 60px);
+  }
+  .app_sidebar{
+    background-color: #572f90;
+  }
+  .presonal_menu-btnItem {
+    width: 16.6%;
+  }
+  .header_body-input{
+    margin-right: 35px;
+  }
+  .explore_boxRadio-item{
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .explore_singer-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .explore_boxEvent-event {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .explore_boxTrening-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .explore_partner-all{
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .explore_partner-item{
+    flex: 0 0 18%;
+    max-width: 18%;
+  }
+  .charts_items-left{
+    width: 65%;
+  }
+  .explore_boxItems-item{
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
 }

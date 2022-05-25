@@ -21,7 +21,8 @@ const Sidebar = () => {
     return (
         <div className="app_sidebar">
             <div className="app_sidebar-logo">
-                <img src="img/logos/main-logo.svg" />
+                <img className='mobile-none' src="img/logos/main-logo.svg" />
+                <img className='logo-mobile' src="img/logos/small-logo.svg" />
             </div>
             <div className="app_sidebar-menu">
                 <ul className="ul-menu1">
@@ -40,7 +41,7 @@ const Sidebar = () => {
                     <li className="menu_item activeLive"><NavLink to={`radio`}>
                         <i className="bi bi-soundwave" />
                         <span>Radio</span>
-                        <div className="live">
+                        <div className="live mobile-none">
                             <span>live</span>
                         </div>
                     </NavLink></li>
@@ -69,7 +70,7 @@ const Sidebar = () => {
                         <span>MV</span>
                     </a></li>
                 </ul>
-                <div className="ul_menu2-saleBox">
+                <div className="ul_menu2-saleBox mobile-none">
                     <div className="ul_menu2-sale">
                         <span>Nghe nhạc không quảng cáo cùng kho nhạc VIP</span>
                         <button>MUA VIP</button>
@@ -153,7 +154,7 @@ const Sidebar = () => {
                     <li className="ul-menu3-text"><span>Sky ơi</span></li>
                 </ul>
             </div>
-            <div className="ul_new--list">
+            <div className="ul_new--list mobile-none">
                 <div className="ul_new-creatList">
                     <i className="bi bi-plus-lg" />
                     <span>Tạo playlist mới</span>
