@@ -4,12 +4,13 @@ const Header = () => {
     return (
         <header className="body_header">
             <div className="header_body-icon">
-                <button className="active">
+                <button className="active mobi-none">
                     <i className="bi bi-arrow-left" />
                 </button>
-                <button>
+                <button className='mobi-none'>
                     <i className="bi bi-arrow-right" />
                 </button>
+                <img src='img/logos/small-logo.svg' className='logo-mobi'/>
             </div>
             <div className="header_body-input">
                 <input type="text" placeholder="Nhập tên bài hát, Nghệ sĩ hoặc MV..." />
@@ -102,7 +103,7 @@ const Header = () => {
                         </svg>
                     </button>
                 </div>
-                <div className="header_item1 mobile-none">
+                <div className="header_item1 mobile-none mobi-none">
                     <button>
                         <label htmlFor="inputUpload">
                             <i className="bi bi-upload" />
@@ -110,7 +111,7 @@ const Header = () => {
                         <input type="file" id="inputUpload" />
                     </button>
                 </div>
-                <div className="header_item1 mobile-none">
+                <div className="header_item1 mobile-none mobi-none">
                     <button>
                         <i className="bi bi-gear" />
                     </button>

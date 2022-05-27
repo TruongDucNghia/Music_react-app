@@ -21,7 +21,7 @@ const Tab1 = () => {
                 </div>
                 <div className="presonal_item1-content">
                     {/* slider Tab1 */}
-                    <div className="presonal_item1-slider">
+                    <div className="presonal_item1-slider mobi-none">
                         <div className="presonal_item1-slider--content">
                             <div className="presonal_item1-slider--boxImg first">
                                 <img src="./img/slides/slide1.jpg" alt />

@@ -1779,7 +1779,7 @@ const Explore = () => {
                             </div>
                         </div>
                         {/* explore singer love */}
-                        <div className="explore_boxItems-all">
+                        <div className="explore_boxItems-all mobi-none">
                             <div className="explore_boxItems-title">
                                 <h3>Nghệ Sĩ Yêu Thích</h3>
                             </div>

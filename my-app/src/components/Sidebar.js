@@ -19,7 +19,7 @@ const Sidebar = () => {
         handlerTabMenu()
     }, [])
     return (
-        <div className="app_sidebar">
+        <div className="app_sidebar mobi-none">
             <div className="app_sidebar-logo">
                 <img className='mobile-none' src="img/logos/main-logo.svg" />
                 <img className='logo-mobile' src="img/logos/small-logo.svg" />

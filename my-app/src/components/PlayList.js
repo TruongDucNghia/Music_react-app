@@ -16,7 +16,7 @@ const PlayList = () => {
             <span>{song.singer}</span>
           </div>
         </div>
-        <div className="presonal_item1-playList--itemCenter">
+        <div className="presonal_item1-playList--itemCenter mobile-none">
           <p>03:40</p>
         </div>
         <div className="presonal_item1-playList--itemRight">
@@ -26,7 +26,7 @@ const PlayList = () => {
           <div className="charts_items-icon btn_love">
             <i className="bi bi-heart-fill" />
           </div>
-          <div className="charts_items-icon">
+          <div className="charts_items-icon mobile-none">
             <i className="bi bi-three-dots" />
           </div>
         </div>

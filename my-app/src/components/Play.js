@@ -36,7 +36,7 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPr
                         </div>
                         <p id="nameSinger">{songsIndex.singer}</p>
                     </div>
-                    <div className="player_boxIcon mobile-none">
+                    <div className="player_boxIcon mobile-none mobi-none">
                         <button className="btn_love">
                             <i className="bi bi-heart" />
                         </button>
@@ -47,7 +47,7 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPr
                 </div>
                 <div className="play_fixed-item2">
                     <div className="player_control-icon">
-                        <div onClick={onRandomSong} className="player_item2-icons random">
+                        <div onClick={onRandomSong} className="player_item2-icons random mobi-none">
                             <i className="bi bi-shuffle" />
                         </div>
                         <div onClick={onPrevSong} className="player_item2-icons prev">
@@ -60,11 +60,11 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPr
                         <div onClick={onNextSong} className="player_item2-icons next">
                             <i className="bi bi-skip-end-fill" />
                         </div>
-                        <div onClick={(e) => onRepeatSong(e)} className="player_item2-icons repeat">
+                        <div onClick={(e) => onRepeatSong(e)} className="player_item2-icons repeat mobi-none">
                             <i className="bi bi-arrow-repeat" />
                         </div>
                     </div>
-                    <div className="player_control-progres">
+                    <div className="player_control-progres mobi-none">
                         <div className="player_time-start">
                             <span>00:00</span>
                         </div>
@@ -74,7 +74,7 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPr
                         </div>
                     </div>
                 </div>
-                <div className="play_fixed-item3">
+                <div className="play_fixed-item3 mobi-none">
                     <div className="player_item3-content">
                         <div className="player_item3-icon mobile-none">
                             <i className="bi bi-camera-video" />
