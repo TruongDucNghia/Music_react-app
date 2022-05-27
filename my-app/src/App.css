@@ -2413,7 +2413,10 @@
   text-decoration: none;
   padding: 8px 0px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
+}
+.charts_conatiner-content{
+  padding: 0;
 }
 .menu_mobile-ul a.active{
   background-color: #ffffff1a;
@@ -2468,7 +2471,10 @@
     margin-right: 10px;
   }
   .presonal_menu-btnItem{
-    flex: 0 0 20%;
+    flex: 0 0 25%;
+  }
+  .presonal_menu-items{
+    width: 90%;
   }
   .explore_boxItems-title h3{
     font-size: 18px;

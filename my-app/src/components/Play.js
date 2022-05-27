@@ -98,7 +98,7 @@ const Play = ({songsIndex, onHandleClickPlay, onHandleSeekSong, onNextSong, onPr
                 </div>
                 <audio src={songsIndex.path} id="audio" />
             </div>
-            <div className="app_play-full">
+            <div className="app_play-full mobi-none">
                 <div className="app_play-header">
                     <div className="app_play-logo">
                         <img src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.5.4/static/media/icon_zing_mp3_60.f6b51045.svg" alt />

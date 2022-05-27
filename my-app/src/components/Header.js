@@ -43,7 +43,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="header_body_nav">
-                <div className="header_item1">
+                <div className="header_item1 mobi-none">
                     <button>
                         <svg width={20} height={20} className="header__nav-icon" viewBox="0 0 20 20">
                             <defs>

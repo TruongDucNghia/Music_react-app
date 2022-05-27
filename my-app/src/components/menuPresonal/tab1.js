@@ -8,8 +8,8 @@ const Tab1 = () => {
                 <div className="presonal_item1-header">
                     <h3 className="presonal_item1-title">Bài Hát <i className="bi bi-chevron-right" />
                     </h3>
-                    <div className="presonal_item1-right">
-                        <button className="presonal_item1-btn">
+                    <div className="presonal_item1-right ">
+                        <button className="presonal_item1-btn mobi-none">
                             <i className="bi bi-upload" />
                             TẢI LÊN
                         </button>
